@@ -25,11 +25,90 @@ p {
 i {
   color: var(--main-color);
 }
-.bg-image-small{
-      background-image: url("/images/Mask-Group-small.svg");
+.bg-image-small {
+  background-image: url("/images/Mask-Group-small.svg");
   background-size: cover;
   background-position: center;
 }
-.w-15{
-width: 15%;
+.w-15 {
+  width: 15%;
+}
+.width-75 {
+  width: 75%;
+}
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px) {
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .main-btn {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 1037px) {
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .main-btn {
+    width: 130px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 871px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .main-btn {
+    width: 130px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .width-75 {
+    width: 95%;
+  }
+}
+
+@media (max-width: 639px) {
+  h6 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
 }
