@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /*? colors */
+  --main-color: #c98a40;
+  --dark-main-color: #584125;
+  --secondary-color: #fdba10;
+  --light-color: #fff;
+  --dark-color: #333333;
+
+  /*? border-radius */
+  --xs-radius: 10px;
+  --sm-radius: 16px;
+  --md-radius: 30px;
+
+  /*? fonts */
+  --main-font-family: "Roboto", sans-serif;
+} /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: var(--main-font-family);
+}
+.main-btn {
+  background-color: var(--secondary-color);
+  border-radius: var(--md-radius);
+  color: var(--light-color);
+}
+
+.bg-image-cover {
+  background-image: url("/images/MaskGroup.svg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-color-cover {
+  background-color: var(--main-color);
+}
