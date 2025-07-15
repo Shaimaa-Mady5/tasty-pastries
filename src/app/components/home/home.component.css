@@ -22,9 +22,6 @@ p {
 .m-row {
   margin-inline: -12px;
 }
-i {
-  color: var(--main-color);
-}
 .bg-image-small {
   background-image: url("/images/Mask-Group-small.svg");
   background-size: cover;
@@ -36,12 +33,10 @@ i {
 .width-75 {
   width: 75%;
 }
-@media (max-width: 1399.98px) {
-}
 
 @media (max-width: 1199.98px) {
   h1 {
-    font-size: 55px;
+    font-size: 50px;
   }
   h2 {
     font-size: 20px;
@@ -50,12 +45,6 @@ i {
   p {
     font-size: 16px;
     font-weight: 600;
-  }
-  .main-btn {
-    width: 150px;
-    height: 40px;
-    font-size: 16px;
-    font-weight: 700;
   }
 }
 
@@ -67,11 +56,6 @@ i {
     font-size: 18px;
   }
   p {
-    font-size: 14px;
-  }
-  .main-btn {
-    width: 130px;
-    height: 30px;
     font-size: 14px;
   }
 }
@@ -86,11 +70,7 @@ i {
   p {
     font-size: 14px;
   }
-  .main-btn {
-    width: 130px;
-    height: 30px;
-    font-size: 14px;
-  }
+
   .width-75 {
     width: 95%;
   }

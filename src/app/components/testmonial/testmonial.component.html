@@ -1,1 +1,30 @@
-<p>testmonial works!</p>
+<section >
+ <div class="inner-section-padding ">
+     <h1 class="text-uppercase mx-auto mb-0 main-heading">testymonials</h1>
+  <div class="container-fluid pt-1">
+
+        <div class="row g-4 justify-content-evenly">
+          <div class="col-md-5   my-bg-light " *ngFor="let card of cards">
+            <div class="">
+              <h2>Kathryn Murphy</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled
+              </p>
+              <div>
+                <i class="fa-solid fa-star" *ngFor="let star of stars"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</div>
+<div class="text-center">
+    <button type="button" class="text-uppercase main-btn mt-4 " routerLink="'/contact'" >
+  contact us
+</button>
+</div>
+ </div>
+</section>
