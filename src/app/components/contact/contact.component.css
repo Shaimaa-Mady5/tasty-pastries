@@ -1,0 +1,9 @@
+.main-heading{
+    color: var(--main-color);
+}
+span{
+    color: var(--dark-color);
+    font-weight: 400;
+    font-size: 14px;
+    font-family: var(--abel-font-family);
+}
