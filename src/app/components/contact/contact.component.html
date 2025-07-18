@@ -1,5 +1,5 @@
 <section class="min-vh-100 d-flex flex-column justify-content-between">
-  <div class="inner-section-padding ">
+  <div class="inner-section-padding">
     <h1 class="text-uppercase mx-auto mb-0 main-heading">contact us</h1>
     <!-- start grid system -->
     <div class="container-fluid my-w-75">
@@ -21,12 +21,14 @@
                     class="form-control my-3"
                     placeholder="Full Name"
                     formControlName="name"
+                    #userName
                   />
                   <div
                     class="alert alert-danger mt-3"
                     *ngIf="
                       contactForm.get('name')?.errors &&
-                      contactForm.get('name')?.touched
+                      (contactForm.get('name')?.touched ||
+                        userName.value.length > 0)
                     "
                   >
                     <p *ngIf="contactForm.get('name')?.getError('required')">
@@ -46,19 +48,21 @@
                     class="form-control my-3"
                     placeholder="Email"
                     formControlName="email"
+                    #userEmail
                   />
                   <div
                     class="alert alert-danger mt-3"
                     *ngIf="
                       contactForm.get('email')?.errors &&
-                      contactForm.get('email')?.touched
+                      (contactForm.get('email')?.touched ||
+                        userEmail.value.length > 0)
                     "
                   >
                     <p *ngIf="contactForm.get('email')?.getError('required')">
                       Email is required
                     </p>
                     <p *ngIf="contactForm.get('email')?.getError('email')">
-                      Invalid email address
+                      Please Write the Email in the right format
                     </p>
                   </div>
 
@@ -68,28 +72,35 @@
                     class="form-control my-3"
                     placeholder="Phone Number"
                     formControlName="phone"
+                    #userPhone
                   />
                   <div
                     class="alert alert-danger mt-3"
                     *ngIf="
                       contactForm.get('phone')?.errors &&
-                      contactForm.get('phone')?.touched
+                      (contactForm.get('phone')?.touched ||
+                        userPhone.value.length > 0)
                     "
                   >
                     <p *ngIf="contactForm.get('phone')?.getError('required')">
                       Phone is required
                     </p>
                     <p *ngIf="contactForm.get('phone')?.getError('pattern')">
-                      Invalid phone number
+                      Please Write the phone in the right format
                     </p>
                   </div>
 
                   <!-- form button -->
                   <button type="submit" class="text-uppercase form-btn">
-                    send <i class="fa-solid fa-spinner fa-spin " *ngIf="isLoading"></i>
+                    send
+                    <i
+                      class="fa-solid fa-spinner fa-spin"
+                      *ngIf="isLoading"
+                    ></i>
                   </button>
                 </form>
 
+                <!-- success response -->
                 <div
                   class="alert alert-success mt-3 text-center"
                   *ngIf="successMsg"
@@ -97,6 +108,13 @@
                   <p>{{ successMsg }}</p>
                 </div>
 
+                <!-- error response -->
+                <div
+                  class="alert alert-danger mt-3 text-center"
+                  *ngIf="errorMsg.length"
+                >
+                  <p>{{ errorMsg }}</p>
+                </div>
                 <!-- end form -->
               </div>
             </div>
@@ -121,6 +139,6 @@
     <!-- end grid system -->
   </div>
   <!-- start fixed part -->
-  <div class=" dark-fixed-part"></div>
+  <div class="dark-fixed-part"></div>
   <!-- end fixed part -->
 </section>
