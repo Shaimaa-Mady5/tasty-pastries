@@ -10,6 +10,7 @@ import { ContactService } from '../../shared/services/contact.service';
 import { NgIf } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ContactSuccess } from '../../shared/interfaces/contact-success';
 
 @Component({
   selector: 'app-contact',
@@ -46,7 +47,7 @@ this.isLoading=true;
       this.idSubscription = this.ContactService.sendContactInfo(
         this.userData
       ).subscribe({
-        next: (resp) => {
+        next: (resp:ContactSuccess) => {
           this.isLoading=false;
           this.successMsg = resp.message;
           console.log(this.successMsg);
