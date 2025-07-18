@@ -9,6 +9,7 @@ import { User } from '../../shared/interfaces/user';
 import { ContactService } from '../../shared/services/contact.service';
 import { NgIf } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -21,6 +22,7 @@ export class ContactComponent {
   successMsg: string = '';
   userData: User = {} as User;
   idSubscription!: Subscription;
+  isLoading:boolean=false;
 
   constructor(private ContactService: ContactService) {}
   contactForm: FormGroup = new FormGroup({
@@ -38,17 +40,20 @@ export class ContactComponent {
 
   handleForm(): void {
     if (this.contactForm.valid) {
+this.isLoading=true;
       this.userData = this.contactForm.value;
       console.log(this.userData);
       this.idSubscription = this.ContactService.sendContactInfo(
         this.userData
       ).subscribe({
         next: (resp) => {
+          this.isLoading=false;
           this.successMsg = resp.message;
           console.log(this.successMsg);
           this.clearForm();
         },
-        error: (err) => {
+        error: (err:HttpErrorResponse) => {
+          this.isLoading=false;
           console.log(err.error);
           this.clearForm();
         },
@@ -62,6 +67,6 @@ export class ContactComponent {
     this.contactForm.reset();
   }
   ngOnDestroy(): void {
-    this.idSubscription.unsubscribe();
+    this.idSubscription?.unsubscribe();
   }
 }

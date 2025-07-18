@@ -1,5 +1,5 @@
-<section class="min-vh-100 position-relative">
-  <div class="inner-section-padding">
+<section class="min-vh-100 d-flex flex-column justify-content-between">
+  <div class="inner-section-padding ">
     <h1 class="text-uppercase mx-auto mb-0 main-heading">contact us</h1>
     <!-- start grid system -->
     <div class="container-fluid my-w-75">
@@ -86,12 +86,12 @@
 
                   <!-- form button -->
                   <button type="submit" class="text-uppercase form-btn">
-                    send
+                    send <i class="fa-solid fa-spinner fa-spin " *ngIf="isLoading"></i>
                   </button>
                 </form>
 
                 <div
-                  class="alert alert-success my-3 text-center"
+                  class="alert alert-success mt-3 text-center"
                   *ngIf="successMsg"
                 >
                   <p>{{ successMsg }}</p>
@@ -121,6 +121,6 @@
     <!-- end grid system -->
   </div>
   <!-- start fixed part -->
-  <div class="position-absolute bottom-0 end-0 dark-fixed-part"></div>
+  <div class=" dark-fixed-part"></div>
   <!-- end fixed part -->
 </section>
