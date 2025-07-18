@@ -132,3 +132,9 @@ i {
     font-size: 45px;
   }
 }
+@media (max-width: 430px) {
+  .main-heading {
+    font-size: 35px;
+  }
+
+}

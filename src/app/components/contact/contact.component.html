@@ -1,8 +1,8 @@
-<section class="min-vh-100">
+<section class="min-vh-100 position-relative">
   <div class="inner-section-padding">
     <h1 class="text-uppercase mx-auto mb-0 main-heading">contact us</h1>
     <!-- start grid system -->
-    <div class="container-fluid w-75">
+    <div class="container-fluid my-w-75">
       <div class="row justify-content-evenly">
         <!-- start left side -->
         <div class="col-md-6">
@@ -10,29 +10,93 @@
             <div class="col-12">
               <div class="content">
                 <!-- start form -->
-                <form class="text-center">
+                <form
+                  class="text-center"
+                  (ngSubmit)="handleForm()"
+                  [formGroup]="contactForm"
+                >
+                  <!-- name input -->
                   <input
                     type="text"
                     class="form-control my-3"
                     placeholder="Full Name"
                     formControlName="name"
                   />
+                  <div
+                    class="alert alert-danger mt-3"
+                    *ngIf="
+                      contactForm.get('name')?.errors &&
+                      contactForm.get('name')?.touched
+                    "
+                  >
+                    <p *ngIf="contactForm.get('name')?.getError('required')">
+                      name is required
+                    </p>
+                    <p *ngIf="contactForm.get('name')?.getError('minlength')">
+                      Name must be at least 3 characters.
+                    </p>
+                    <p *ngIf="contactForm.get('name')?.getError('maxlength')">
+                      Name must not exceed 15 characters.
+                    </p>
+                  </div>
+
+                  <!-- email input -->
                   <input
                     type="email"
                     class="form-control my-3"
                     placeholder="Email"
                     formControlName="email"
                   />
+                  <div
+                    class="alert alert-danger mt-3"
+                    *ngIf="
+                      contactForm.get('email')?.errors &&
+                      contactForm.get('email')?.touched
+                    "
+                  >
+                    <p *ngIf="contactForm.get('email')?.getError('required')">
+                      Email is required
+                    </p>
+                    <p *ngIf="contactForm.get('email')?.getError('email')">
+                      Invalid email address
+                    </p>
+                  </div>
+
+                  <!-- phone input -->
                   <input
                     type="tel"
                     class="form-control my-3"
                     placeholder="Phone Number"
                     formControlName="phone"
                   />
+                  <div
+                    class="alert alert-danger mt-3"
+                    *ngIf="
+                      contactForm.get('phone')?.errors &&
+                      contactForm.get('phone')?.touched
+                    "
+                  >
+                    <p *ngIf="contactForm.get('phone')?.getError('required')">
+                      Phone is required
+                    </p>
+                    <p *ngIf="contactForm.get('phone')?.getError('pattern')">
+                      Invalid phone number
+                    </p>
+                  </div>
+
+                  <!-- form button -->
                   <button type="submit" class="text-uppercase form-btn">
                     send
                   </button>
                 </form>
+
+                <div
+                  class="alert alert-success my-3 text-center"
+                  *ngIf="successMsg"
+                >
+                  <p>{{ successMsg }}</p>
+                </div>
+
                 <!-- end form -->
               </div>
             </div>
@@ -41,7 +105,7 @@
         <!-- end left-side -->
 
         <!-- right side -->
-        <div class="col-md-6 d-flex flex-column justify-content-evenly py-5">
+        <div class="col-md-6 d-flex flex-column py-5">
           <div class="my-3">
             <i class="fa-solid fa-envelope"></i>
             <span class="ms-3">upskilling.eg1&#64;gmail.com</span>
@@ -57,6 +121,6 @@
     <!-- end grid system -->
   </div>
   <!-- start fixed part -->
-  <div class="fixed-bottom dark-fixed-part"></div>
+  <div class="position-absolute bottom-0 end-0 dark-fixed-part"></div>
   <!-- end fixed part -->
 </section>
