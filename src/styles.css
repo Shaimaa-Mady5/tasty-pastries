@@ -8,6 +8,7 @@
   --dark-main-color: #584125;
   --secondary-color: #f7bc28;
   --secondary-color-hover: rgb(247, 188, 40, 0.7);
+  --bg-input:#FFD39F;
   --light-color: #fff;
   --dark-color: #333333;
 
@@ -63,6 +64,23 @@ i {
 .main-btn:hover {
   background-color: var(--secondary-color-hover);
 }
+.form-btn {
+  background-color: var(--light-color);
+  border-radius: var(--md-radius);
+  color: var(--dark-color);
+  width: 140px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 900;
+  border-color: var(--main-color);
+  transition: 0.1s background-color;
+}
+.form-btn:hover {
+  background-color: var(--dark-main-color);
+  color: var(--light-color);
+  border-color: transparent;
+}
+
 
 .bg-image-cover {
   background-image: url("/images/MaskGroup.svg");
@@ -113,4 +131,10 @@ i {
   .main-heading {
     font-size: 45px;
   }
+}
+@media (max-width: 430px) {
+  .main-heading {
+    font-size: 35px;
+  }
+
 }
