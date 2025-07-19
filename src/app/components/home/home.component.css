@@ -1,0 +1,94 @@
+h1,
+p,
+h2 {
+  color: var(--light-color);
+}
+h1 {
+  font-size: var(--h1-sm);
+}
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+h6 {
+  font-family: var(--poppins-font-family);
+  font-weight: 500;
+  color: var(--light-color);
+}
+p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.m-row {
+  margin-inline: -12px;
+}
+.bg-image-small {
+  background-image: url("/images/Mask-Group-small.svg");
+  background-size: cover;
+  background-position: center;
+}
+.w-15 {
+  width: 15%;
+}
+.width-75 {
+  width: 75%;
+}
+
+@media (max-width: 1199.98px) {
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1037px) {
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 871px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  .width-75 {
+    width: 95%;
+  }
+}
+
+@media (max-width: 639px) {
+  h6 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
