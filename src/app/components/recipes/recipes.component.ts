@@ -3,10 +3,11 @@ import { RecipesService } from '../../shared/services/recipes.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Recipes } from '../../shared/interfaces/recipes';
 import { NgFor } from '@angular/common';
+import { ContactBtnComponent } from "../contact-btn/contact-btn.component";
 
 @Component({
   selector: 'app-recipes',
-  imports: [NgFor],
+  imports: [NgFor, ContactBtnComponent],
   templateUrl: './recipes.component.html',
   styleUrl: './recipes.component.css',
 })

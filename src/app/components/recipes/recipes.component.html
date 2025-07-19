@@ -1,4 +1,4 @@
-<section class="min-vh-100">
+<section class="min-vh-100" id="recipes">
   <div class="inner-section-padding">
     <!-- start main heading -->
     <h1 class="text-uppercase mx-auto mb-0 main-heading">recipes</h1>
@@ -9,7 +9,7 @@
           class="col-md-6 col-lg-4"
           *ngFor="let recipe of recipes.slice(0, 3)"
         >
-         <!-- start show meals -->
+          <!-- start show meals -->
           <div>
             <div class="card rounded-4" style="width: 288px">
               <img
@@ -33,12 +33,6 @@
     </div>
 
     <!-- contact BTN -->
-    <div class="text-center">
-      <button type="button" class="text-uppercase main-btn mt-4">
-        <a href="#testmonial" class="text-decoration-none text-light"
-          >contact us</a
-        >
-      </button>
-    </div>
+    <app-contact-btn></app-contact-btn>
   </div>
 </section>
