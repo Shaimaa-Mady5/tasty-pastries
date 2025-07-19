@@ -1,1 +1,44 @@
-<p>recipes works!</p>
+<section class="min-vh-100">
+  <div class="inner-section-padding">
+    <!-- start main heading -->
+    <h1 class="text-uppercase mx-auto mb-0 main-heading">recipes</h1>
+    <!-- start grid system -->
+    <div class="container-fluid pt-1">
+      <div class="row g-4">
+        <div
+          class="col-md-6 col-lg-4"
+          *ngFor="let recipe of recipes.slice(0, 3)"
+        >
+         <!-- start show meals -->
+          <div>
+            <div class="card rounded-4" style="width: 288px">
+              <img
+                [src]="recipe.strMealThumb"
+                class="card-img-top rounded-4"
+                [alt]="recipe.strMeal"
+              />
+              <div class="card-body">
+                <h5 class="card-title">{{ recipe.strMeal }}</h5>
+                <p class="card-text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact BTN -->
+    <div class="text-center">
+      <button type="button" class="text-uppercase main-btn mt-4">
+        <a href="#testmonial" class="text-decoration-none text-light"
+          >contact us</a
+        >
+      </button>
+    </div>
+  </div>
+</section>
