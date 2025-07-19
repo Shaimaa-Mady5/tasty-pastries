@@ -1,3 +1,13 @@
-.main-heading{
-    color: var(--main-color);
+.main-heading {
+  color: var(--main-color);
+}
+h5 {
+  color: var(--main-color);
+  font-weight: 900;
+  font-family: var(--poppins-font-family);
+}
+p {
+  color: var(--dark-color);
+  font-family: var(--poppins-font-family);
+  font-size: 14px;
 }
