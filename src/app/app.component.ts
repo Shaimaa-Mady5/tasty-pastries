@@ -3,10 +3,11 @@ import { HomeComponent } from './components/home/home.component';
 import { TestmonialComponent } from "./components/testmonial/testmonial.component";
 import { ContactComponent } from "./components/contact/contact.component";
 import { RecipesComponent } from "./components/recipes/recipes.component";
+import { AboutComponent } from './components/about/about.component';
 
 @Component({
   selector: 'app-root',
-  imports: [HomeComponent, TestmonialComponent, ContactComponent, RecipesComponent],
+  imports: [HomeComponent, TestmonialComponent, ContactComponent, RecipesComponent,AboutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

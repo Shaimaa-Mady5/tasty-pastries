@@ -1,4 +1,7 @@
-<section class="min-vh-100 d-flex flex-column justify-content-between" id="testmonial">
+<section
+  class="min-vh-100 d-flex flex-column justify-content-between"
+  id="testmonial"
+>
   <div class="inner-section-padding">
     <h1 class="text-uppercase mx-auto mb-0 main-heading">contact us</h1>
     <!-- start grid system -->
@@ -62,7 +65,7 @@
                       Email is required
                     </p>
                     <p *ngIf="contactForm.get('email')?.getError('email')">
-                      Please Write the Email in the right format
+                      Please enter a valid email address.
                     </p>
                   </div>
 
@@ -86,7 +89,7 @@
                       Phone is required
                     </p>
                     <p *ngIf="contactForm.get('phone')?.getError('pattern')">
-                      Please Write the phone in the right format
+                      Please enter a valid phone number.
                     </p>
                   </div>
 

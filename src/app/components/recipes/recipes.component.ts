@@ -19,13 +19,13 @@ export class RecipesComponent {
   getAllData(): void {
     this.recipesService.getRecipes().subscribe({
       next: (resp) => {
-        console.log(resp);
+        // console.log(resp);
         this.recipes=resp.meals
-        console.log(this.recipes);
+        // console.log(this.recipes);
         
       },
       error: (err: HttpErrorResponse) => {
-        console.log(err);
+        // console.log(err);
       },
     });
   }
