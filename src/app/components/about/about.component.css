@@ -21,8 +21,7 @@ p {
 .about-img{
     position: absolute;
     top: 50%;
-    right: 30%;
-    transform: translateY(-50%);
+    transform: translate(-30%,-50%);
 }
 @media (max-width: 1199.98px) {
   h1 {
