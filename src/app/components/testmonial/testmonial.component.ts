@@ -1,9 +1,10 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { ContactBtnComponent } from "../contact-btn/contact-btn.component";
 
 @Component({
   selector: 'app-testmonial',
-  imports: [NgFor],
+  imports: [NgFor, ContactBtnComponent],
   templateUrl: './testmonial.component.html',
   styleUrl: './testmonial.component.css',
 })

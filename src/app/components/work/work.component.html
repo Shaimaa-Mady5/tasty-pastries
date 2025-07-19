@@ -1,1 +1,41 @@
-<p>work works!</p>
+<section class="min-vh-100 position-relative">
+  <div class="container-fluid m-row">
+    <div class="row g-0">
+      <!-- left-side -->
+      <div class="col-4 bg-image-cover pt-5">
+        <div class="width-75 ms-auto">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the
+          </p>
+        </div>
+      </div>
+      <!-- right side -->
+      <div class="col-8 bg-color-cover min-vh-100">
+        <div class="width-75 mx-auto ps-5 pt-2">
+          <h1 class="text-uppercase me-auto">
+            how we <br />
+            work
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- grid images show -->
+  <div
+    class="inner-section-padding position-absolute bottom-0 images-show z-3 py-4"
+  >
+    <div class="container-fluid">
+      <div class="row g-4">
+        <div class="col-md-3 col-6" *ngFor="let img of imageSrc">
+          <div>
+            <img [src]="img" alt="breakfast" class="w-100 work-imgs" />
+          </div>
+        </div>
+      </div>
+         <!-- contact BTN -->
+      <app-contact-btn></app-contact-btn>
+    </div>
+  </div>
+</section>
